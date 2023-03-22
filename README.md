@@ -1,10 +1,14 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped by Cam Burley.
 
-## Available Scripts
+## Getting started
 
-In the project directory, you can run:
+run:
+
+### `npm i`
+
+then 
 
 ### `npm start`
 
@@ -14,57 +18,19 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+### Design Decisions
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+For this project, I followed the requirements and I wanted to save some time to work on at least one of the bonus items. I was able to do this.
 
-### `npm run build`
+I wanted the UI to look similar to a tree on VS code or similar so I was sure to include visual hierarchy in my component. The files vs folder icons are different and visually distinct. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The bonus was to enable users to add new files or folders. I added a drop down menu to choose the object type ( file or folder ), then after adding a name and clicking "Add", the new object is added. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+I didn't spend any time on validating the form. With more time, that's something I would have considered. I could have made an alert or toast that alerts the user if the form is empty and they're pressing Add. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The one tricky part was making a decision about how the Expand/Collapse logic would work in conjunction with adding new objects. My idea was to identify the expanded folder and last item clicked to serve as the insertion point for new objects. I needed to make assumptions if there is an Expand All / Collapse All button, because when expanded or collapsed, it's not clear where the insertion point should be. If collapsed, is the insertion point the root or does the last clicked folder persist and the insertion point is that folder? Same question, if everything is expanded. You could argue there is not a clear UX convention. 
+These assumptions are pretty open to interpretation. I think this is the type of decision a team would make together with a UX designer.
 
-### `npm run eject`
+I added a simple blue color to indicate a selected file or folder. The functions do a good job traversing the tree so feel free to make as many nested folders and files as needed. 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+I looked at the eval criteria and the component satisfies all. I hope you like it. Happy to answer any questions! # forest
